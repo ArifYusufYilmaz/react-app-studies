@@ -17,6 +17,10 @@ function Car(props){
                     The count of maintenance is {carMaintenance.length}
                 </h2>
              }
+             <b>Cars are : </b> <br/>
+            <ul>
+                {props.brand.cars.map((car)=> <li>{car}</li>)}
+            </ul>
             </>
         )
     }
