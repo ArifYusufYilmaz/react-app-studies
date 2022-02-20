@@ -1,17 +1,27 @@
 function Car(props){
+    const isStarted = props.brand.carSituation;
     const startCar=(displayingMessage, event)=>{
         alert(event.type);
     }
     const stopCar=()=>{
-        alert("Stopped!!");
+        alert("The Car is stopping!!");
     }
-    return(
-        <>
-         <h1>Hi, This is a component for a {props.brand.carName} - {props.brand.carModel}</h1>
-         <button onClick={(event)=>startCar("Car is going slowly!!", event)}> Start Car </button>
-         <button onClick={stopCar}>To Stop the Car</button>
-        {/* there is a difference between using stopCar and stopCar().  */}
-        </>
-    )
+    if(isStarted){
+        return(
+            <>
+             <h1>Hi, This is a component for a {props.brand.carName} - {props.brand.carModel}</h1>
+             <button onClick={stopCar}>To Stop the Car</button>
+            </>
+        )
+    }
+    else{
+            return(
+            <>
+             <h1>Hi, This is a component for a {props.brand.carName} - {props.brand.carModel}</h1>
+             <button onClick={(event)=>startCar("Car is starting!!", event)}> Start Car </button>
+              </>
+            )
+    }
+    
 }
 export default Car;
