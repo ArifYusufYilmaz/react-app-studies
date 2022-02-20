@@ -4,7 +4,7 @@ function Garage(){
     return (
         <>
         <p>Whic car is in the garage?</p>
-        <Car></Car>
+        <Car brand="TOGG CAR"></Car>
         </>
     );
 
