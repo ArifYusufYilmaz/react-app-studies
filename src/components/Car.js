@@ -1,10 +1,14 @@
 function Car(props){
         return(
             <>
-             <ul>
-             {props.carInfo.map((car)=> <li>{car.brand} - {car.carModel}</li>)}
             
-            </ul>
+             <li>
+                 <p>Car Brand is : {props.brand}</p>
+                 <p>Car Model is : {props.carModel}</p>
+                 <p>Car Maintenance is : {props.carMaintenance}</p>
+             </li>
+            
+            
             </>
         )
 }

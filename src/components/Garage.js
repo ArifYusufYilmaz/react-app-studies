@@ -12,7 +12,9 @@ function Garage(){
     return (
         <>
         <p>Whic car is in the garage?</p>
-            <Car carInfo={cars}/>
+           <ul>
+               {cars.map((car)=> <Car key={car.id} brand={car.brand} carModel={car.carModel} carMaintenance={car.carMaintenance}/>)}
+           </ul>
         </>
     );
 
