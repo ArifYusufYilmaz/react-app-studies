@@ -1,10 +1,11 @@
 import Car from './Car.js';
 
 function Garage(){
+    const carName = "Togg Car";
     return (
         <>
         <p>Whic car is in the garage?</p>
-        <Car brand="TOGG CAR"></Car>
+        <Car brand={carName}></Car>
         </>
     );
 
