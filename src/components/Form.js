@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 
-function MyForm(){
+function MyFormBasic(){
      const [name, setName] = useState("");
      const handleSubmit = (event) =>{
          event.preventDefault(); // Html elementlerinin mevcut eylemlerini engelleme isteği. Mevcut durumda sayfa yeniden yüklenmez.
@@ -20,4 +20,39 @@ function MyForm(){
         </form>
     )
 }
-export default MyForm;
+function MyFormUpgraded(){
+    const [inputs, setInputs] = useState({})
+    const handleChange = (event)=>{
+         const name = event.target.name;
+         const value = event.target.value;
+        setInputs((values) => ({...values, [name]: value})) // buradaki spread operatorü ne iş yapıyor?
+        
+    }
+    
+    const handleSubmit=(event)=>{
+        event.preventDefault();
+        alert(inputs);
+    }
+    return(
+        <form onSubmit={handleSubmit}>
+            <label> Enter Your Name
+                <input
+                type="text"
+                name="username"
+                value={inputs.username || ""}
+                onChange={handleChange}
+                />
+            </label>
+            <label> Enter Your Age
+            <input
+                type="number"
+                name="age"
+                value={inputs.age || ""}
+                onChange={handleChange}
+                />
+            </label>
+            <input type="submit"/>
+        </form>
+    )
+}
+export default MyFormUpgraded;
