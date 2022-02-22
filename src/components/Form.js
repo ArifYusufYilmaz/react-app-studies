@@ -1,16 +1,22 @@
 
 import { useState } from "react";
 
+
 function MyForm(){
      const [name, setName] = useState("");
+     const handleSubmit = (event) =>{
+         event.preventDefault(); // Html elementlerinin mevcut eylemlerini engelleme isteği. Mevcut durumda sayfa yeniden yüklenmez.
+        alert(`The name you entered was: ${name}`);
+    }
      return(
-        <form>
+        <form onSubmit={handleSubmit}>
             <label> Enter a text;
                  <input 
                  type="text"
                  value={name}
                  onChange={(e)=> setName(e.target.value) }/>
             </label>
+            <input type="submit"/>
         </form>
     )
 }
