@@ -1,5 +1,6 @@
 import Car from './Car.js';
-import MyFormBasic from './Form.js';
+import {MyFormBasic,MyFormUpgraded} from './Form.js';
+import {TextAreaForm,SelectForm} from './SelectandTextareForm';
 function Garage(){
     const cars = [
         {id:1, brand:"Togg"  ,carModel:"2023",carSituation:true,carMaintenance:[]},
@@ -17,6 +18,8 @@ function Garage(){
            </ul>
            <p>********** Form **********</p>
            <MyFormBasic/>
+           <TextAreaForm/>
+           <SelectForm/>
         </>
     );
 

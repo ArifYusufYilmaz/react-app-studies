@@ -55,4 +55,4 @@ function MyFormUpgraded(){
         </form>
     )
 }
-export default MyFormUpgraded;
+export {MyFormUpgraded,MyFormBasic};
