@@ -1,5 +1,5 @@
 import Car from './Car.js';
-
+import Form from './Form.js';
 function Garage(){
     const cars = [
         {id:1, brand:"Togg"  ,carModel:"2023",carSituation:true,carMaintenance:[]},
@@ -15,6 +15,8 @@ function Garage(){
            <ul>
                {cars.map((car)=> <Car key={car.id} brand={car.brand} carModel={car.carModel} carMaintenance={car.carMaintenance}/>)}
            </ul>
+           <p>********** Form **********</p>
+           <Form/>
         </>
     );
 
