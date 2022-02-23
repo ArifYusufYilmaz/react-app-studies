@@ -1,5 +1,5 @@
 import Car from './Car.js';
-import {MyFormBasic,MyFormUpgraded} from './Form.js';
+import {MyFormBasic, MyFormUpgraded} from './Form.js';
 import {TextAreaForm,SelectForm} from './SelectandTextareForm';
 function Garage(){
     const cars = [
